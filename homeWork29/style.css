@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.cub {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

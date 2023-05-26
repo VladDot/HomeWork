@@ -1,0 +1,51 @@
+.slider-list {
+    overflow-x: hidden;
+}
+
+.slider-track {
+    white-space: nowrap;
+    transform: translateX(0%);
+    transition: all 2s;
+}
+
+.slider-slide {
+    width: 99.5%;
+    display: inline-block;
+    height: 300px;
+    border: 1px solid black;
+    background: aqua;
+    margin: 3px;
+}
+
+.arrow {
+    list-style: none;
+}
+
+.arrow-next {
+    position: absolute;
+    right: 30px;
+    top: 155px
+}
+
+.arrow-prev {
+    position: absolute;
+    left: 30px;
+    top: 155px
+}
+
+.slider-dot i {
+    pointer-events: none;
+}
+
+.slider-dots {
+    list-style: none;
+}
+
+.slider-dot button {
+    pointer-events: none;
+}
+
+.slider-dot {
+    border: 1px, solid;
+    border-radius: 50%;
+}

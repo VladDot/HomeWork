@@ -1,0 +1,29 @@
+section {
+  padding: 20px 20px 100px;
+}
+@media (max-width: 1199px) {
+  section {
+    padding: 15px 15px 80px;
+  }
+}
+@media (max-width: 899px) {
+  section {
+    padding: 10px 10px 50px;
+  }
+}
+@media (max-width: 599px) {
+  section {
+    padding: 5px 5px 30px;
+  }
+}
+
+.mainBanner {
+  background-color: aqua;
+  color: black;
+  font: normal normal normal 16px/24px "Roboto Light", sans-serif;
+}
+
+.container {
+  max-width: 1180px;
+  margin-inline: auto;
+}
