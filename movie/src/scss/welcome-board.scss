@@ -1,0 +1,21 @@
+.board {
+  background: url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/bgQUBbZ14hfeb975yZ2YzTnAwen.jpg");
+  width: 100%;
+  height: 360px;
+  display: block;
+  margin: auto;
+  -webkit-user-select: none;
+  background-color: hsl(0, 0%, 90%);
+  transition: background-color 300ms;
+}
+.corol-btn {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  background: rgb(30, 213, 170);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 213, 170, 1) 0%,
+    rgba(2, 181, 227, 1) 32%
+  );
+}
