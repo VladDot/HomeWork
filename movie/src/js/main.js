@@ -1,7 +1,18 @@
-import { getMovies } from "./api";
+import { getMovies, getMovieDetails } from "./api";
+checkUrl();
 
-const options = { method: "GET", headers: { accept: "application/json" } };
+/* getMovies("upcoming", "#upcoming"); */
 
-getMovies("popular", "#popular");
-getMovies("top_rated", "#topRate");
-getMovies("upcoming", "#upcoming");
+window.addEventListener("hashchange", (e) => {
+  checkUrl();
+});
+
+function checkUrl() {
+  const [hash, movieId] = location.hash.split("=");
+
+  if (hash === "#movieId") {
+    getMovieDetails(movieId);
+  } else {
+    getMovies("top_rated");
+  }
+}

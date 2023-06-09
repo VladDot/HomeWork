@@ -1,14 +1,31 @@
 import { generateApiUrl } from "./utils";
-import { renderMovie } from "./templetes";
+import { renderMovies, renderMovieDetalies, renderError } from "./templetes";
 
-export const getMovies = (path, root) => {
+export const getMovies = (path) => {
+  fetch(generateApiUrl(path))
+    .then((res) => res.json())
+    .then((data) => {
+      const root = document.querySelector("#root");
+      if (data.success === false) {
+        root.innerHTML = renderError(data);
+      } else {
+        root.innerHTML = renderMovies(data.results, path);
+      }
+    })
+    .catch((err) => console.error(err));
+};
+
+export const getMovieDetails = (path) => {
   fetch(generateApiUrl(path))
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      const movies = data.results.map((movie) => renderMovie(movie)).join("");
-
-      document.querySelector(root).innerHTML = movies;
+      const root = document.querySelector("#root");
+      if (data.success === false) {
+        root.innerHTML = renderError(data);
+      } else {
+        root.innerHTML = renderMovieDetalies(data);
+      }
     })
     .catch((err) => console.error(err));
 };
