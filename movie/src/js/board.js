@@ -1,5 +1,5 @@
-export const mainBoard = () => `
-  <div class="container my-6">
+export const mainBoard = () =>
+  `<div class="container my-6">
     <div class="row">
       <div class="col">
         <section class="board d-flex align-items-center justify-content-center">
@@ -35,5 +35,4 @@ export const mainBoard = () => `
         </section>
       </div>
     </div>
-  </div>
-  `;
+  </div>`;

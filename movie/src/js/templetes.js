@@ -12,19 +12,20 @@ export const renderMovie = ({ id, poster_path, title, vote_average }) =>
       ></img>
     </a>
     ${rate(vote_average)}
-    <div class="title p-3">'${title}'</div>
+    <h3 class="title p-3">${title}</h3>
   </div>`;
 
 export const renderMovies = (movies, path) =>
   `
-    <section  class="my-5">
+    <section  class="my-5 container">
     <div class="d-flex h-31 px-4">
     <h2 class="m-0 me-4">${generateTitle(path)}</h2>
 ${renderPopularButton("Today", "The Week")}
 </div>
-    <div class="banners bg-img ${path}" > ${movies
-    .map((movie) => renderMovie(movie))
-    .join("")}
+    <div class="banners bg-img " > ${movies
+      .map((movie) => renderMovie(movie))
+      .join("")}
+      </div>
       </div>
     </section>
 `;
@@ -33,8 +34,8 @@ export const renderMovieDetalie = ({
   id,
   title,
   vote_average,
-  backdrop_path,
   poster_path,
+  overview,
 }) =>
   `
   <div class="container">
@@ -62,15 +63,17 @@ export const renderMovieDetalie = ({
  <li class="border rounded-circle p-1">img</li>
  <li class="border rounded-circle p-1">img</li>
  </ul>
+ <div>
+ <h3 class="py-2">Overview</h3>
+ <p>${overview}</p>
+ </div>
   </div>
-  
+
 </div>
   </div>
   </div>
   </div>
   </div>
-
-
 `;
 
 export const renderMovieDetalies = (movie) => `
