@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as LogoIcon } from "../../images/logo.svg";
+import { ReactComponent as LogoIcon } from "../../logo.svg";
 import NavItem from "./NavItem/component";
 import HeaderActions from "../A/HeaderActions";
 import Burger from "../A/Burger";
